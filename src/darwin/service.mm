@@ -88,7 +88,7 @@ void DarwinMediaService::EmitWithInt(std::string eventName, int details) {
 
 void DarwinMediaService::StartService(const Napi::CallbackInfo& info) {
   Napi::HandleScope scope(info.Env());
-
+  NSLog("test message");
   NativeMediaController* controller = [[NativeMediaController alloc] init];
   [controller associateService:this];
 
